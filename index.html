@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        11 stats
+    </title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/9c70741414.js"></script>
+    <script>
+        function animateValue(id, start, end, duration) {
+            if (start === end) return;
+            var range = end - start;
+            var current = start;
+            var increment = end > start? 1 : -1;
+            var stepTime = Math.abs(Math.floor(duration / range));
+            var obj = document.getElementById(id);
+            var timer = setInterval(function() {
+                current += increment;
+                obj.innerHTML = current+"K+";
+                if (current == end) {
+                    clearInterval(timer);
+                }
+            }, stepTime);
+        }
+
+        function go()
+        {	
+            
+            animateValue('value1', 1, 10, 2000);
+            animateValue('value2', 1, 10, 2000);
+            animateValue('value3', 0, 400, 2000);
+            animateValue('value4', 1, 15, 2000);
+        }
+    </script>
+    <style>
+        .aaaa1
+        {
+            border: 5px;
+            
+
+        }
+        @media(min-width: 500px) 
+        {
+          
+            .back-g
+        {
+            background-image: url(s2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            padding: 80px 60px 70px 60px;
+
+        }
+
+        
+    }
+        @media(max-width: 500px) 
+        {
+
+            .back-g
+            {
+                background-image: url(s1.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                padding: 70px 60px 70px 60px;
+
+            }
+
+        }
+        #value1 {
+            font-size: 70px;
+            color: rgba(255, 255, 255, 0.829);
+
+        }
+        #value2 {
+            
+            font-size: 70px;
+            color: rgba(255, 255, 255, 0.829);
+        }
+        #value3 {
+
+            font-size: 70px;
+            color: rgba(255, 255, 255, 0.829);
+
+        }
+        #value4 
+        {   
+
+            font-size: 70px;
+            color: rgba(255, 255, 255, 0.829);
+
+        }
+
+        .col-md-4
+        {
+            padding: 10px 10px 10px 20px;
+        }
+
+        h3
+        {
+            padding: 20px 20px 0px 20px;
+            font-size: 50px;
+            color: rgba(255, 255, 255, 0.829);
+        }
+        h6
+        {
+            padding: 0px 20px 20px 20px;
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.829);
+
+        }
+        h4
+        {
+            padding: 0px 24px 15px 10px;
+            font-size: 35px;
+            color: rgba(255, 255, 255, 0.829);
+
+        }
+        h2
+        {
+            padding: 25px 150px 15px 10px;
+            font-size: 50px;
+            color: rgba(255, 255, 255, 0.829);
+        }
+        .col-md-3 
+        {
+            padding: 35px 10px 10px 10px;
+        }
+        
+    </style>
+</head>
+<body onscroll="go()" onload="go()">
+
+    
+    <div class="row back-g">
+        
+       
+        <div class="row text-center aaaa1">
+            <h3 style="padding:0px;">OFCOURSE WE ARE PROUD!</h3>
+            <b><h6>Our events platform is young but are growing. Join us in this exciting journing</h6></b>
+            <br>
+            <br>
+            <div class="col-md-3 ">
+                <div id="value1" onmouseover="animateValue('value1', 1, 10, 2000)" >10 </div>
+                <h4>Patrons</h4>
+                
+            </div>
+            <div class="col-md-3 ">
+                    <div id="value2" onmouseover="animateValue('value2', 1, 10, 2000)" >10 </div>
+                        <h4>Patrons</h4>
+
+            </div>
+            <div class="col-md-3">
+                   <div id="value3" onmouseover="animateValue('value3', 0, 400, 5000)"  >400</div>
+                        <h4>Creators</h4>
+          
+            </div>
+            <div class="col-md-3">
+                    <div id="value4" onmouseover="animateValue('value4', 1, 15, 2000)">15 </div>
+                        <h4>Countries</h4>
+              
+
+            </div>
+  
+        </div>
+        
+
+    
+</body>
+
+</html>
